@@ -13,7 +13,6 @@
 
 #include<cmath>
 #include<iostream>
-
 void processInput(GLFWwindow *window);
 void framebuffer_size_callback(GLFWwindow * window , int height , int width);
 void mouse_callback(GLFWwindow* window, double xpos , double ypos);
@@ -74,7 +73,7 @@ glEnable(GL_DEPTH_TEST);
 Shader ourShader("src/shader.vs","src/shader.fs");
 
 //load file
-File f("/home/ashim/semester_5/open/box/resource/box.obj");
+File f("/home/ashim/semester_5/open/box/resource/ictc_triangulated.obj");
 
 
 unsigned int VAO ,VBO ,EBO  ;
@@ -121,7 +120,7 @@ while(!glfwWindowShouldClose(window))
 
     //model matrix
     glm::mat4 model = glm::mat4(1.0f); 
-    model=glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+    model=glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE,glm::value_ptr(model)); 
     

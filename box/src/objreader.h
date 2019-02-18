@@ -55,9 +55,9 @@ void File::import_obj()
         {   
             float x, y, z;
 			in >> x >> y >> z;
-            vertices.push_back(x/4);
-            vertices.push_back(y/4);
-            vertices.push_back(z/4);
+            vertices.push_back(x/5);
+            vertices.push_back(y/5);
+            vertices.push_back(z/5);
             
            
             continue;
@@ -69,7 +69,7 @@ void File::import_obj()
             for (int i=0;i<3;i++)
             {
               in >> a >>d>>d>>c;
-              indices.push_back(a);
+              indices.push_back(--a);
 
             }
             continue;

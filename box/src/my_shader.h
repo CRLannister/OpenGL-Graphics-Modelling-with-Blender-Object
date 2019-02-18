@@ -28,6 +28,10 @@ public:
         {
             // open files
             vShaderFile.open(vertexPath);
+            if (vShaderFile.is_open())
+            {
+                std::cout<<"sfhsjdf\n";
+            }
             fShaderFile.open(fragmentPath);
             std::stringstream vShaderStream, fShaderStream;
             // read file's buffer contents into streams

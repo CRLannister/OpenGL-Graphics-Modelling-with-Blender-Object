@@ -1,0 +1,10 @@
+[default]
+name=Default
+runtime=host
+config-opts=
+run-opts=
+prefix=/home/ashish/.cache/gnome-builder/install/5thSEM_Graphics/host
+app-id=
+postbuild=
+prebuild=
+default=true

@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="ICTC" targetName="ICTC" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8a55131-a068-4abe-bdef-3167d44a3936" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/box/box" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/glad.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/glad.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/glad.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/resource/box.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/box.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/_features.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/_fixes.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/_noise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/_swizzle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/_swizzle_func.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/_vectorize.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/compute_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/compute_vector_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_common_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_exponential.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_exponential_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_geometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_geometric_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_integer_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_matrix.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_matrix_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_packing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_packing_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_trigonometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_trigonometric_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_vector_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/func_vector_relational_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/glm.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/qualifier.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/setup.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_half.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_half.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat2x2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat2x3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat2x4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat3x2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat3x3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat3x4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_mat4x4_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_quat.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_quat.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_quat_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec1.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/detail/type_vec4_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/exponential.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_clip_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_clip_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double2x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double2x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double2x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double3x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double3x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double3x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double4x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double4x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_double4x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float2x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float2x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float2x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float3x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float3x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float3x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float4x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float4x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_float4x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_projection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_projection.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/matrix_transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_common_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_double.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_double_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_exponential.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_exponential.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_float.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_float_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_geometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_geometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_trigonometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/quaternion_trigonometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_constants.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_constants.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_float_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_int_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/scalar_uint_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_bool4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_double4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_float4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_int4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/ext/vector_uint4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/fwd.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/geometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/glm.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/bitfield.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/bitfield.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/color_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/color_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/constants.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/constants.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/epsilon.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/epsilon.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_access.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_access.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_inverse.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_inverse.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/matrix_transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/noise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/noise.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/packing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/packing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/quaternion.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/quaternion.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/quaternion_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/random.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/random.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/reciprocal.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/reciprocal.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/round.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/round.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/type_aligned.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/type_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/type_precision.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/type_ptr.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/type_ptr.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/ulp.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/ulp.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtc/vec1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/associated_min_max.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/associated_min_max.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/bit.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/bit.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/closest_point.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/closest_point.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/color_encoding.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/color_encoding.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/color_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/color_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/color_space_YCoCg.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/color_space_YCoCg.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/compatibility.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/compatibility.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/component_wise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/component_wise.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/dual_quaternion.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/dual_quaternion.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/easing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/easing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/euler_angles.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/euler_angles.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/extend.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/extend.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/extended_min_max.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/extended_min_max.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/exterior_product.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/exterior_product.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/fast_exponential.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/fast_exponential.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/fast_square_root.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/fast_square_root.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/fast_trigonometry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/fast_trigonometry.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/float_notmalize.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/functions.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/functions.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/gradient_paint.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/gradient_paint.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/handed_coordinate_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/handed_coordinate_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/hash.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/hash.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/intersect.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/intersect.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/io.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/log_base.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/log_base.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_cross_product.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_cross_product.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_decompose.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_decompose.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_factorisation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_factorisation.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_interpolation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_interpolation.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_major_storage.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_major_storage.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_operation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_operation.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_query.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_query.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_transform_2d.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/matrix_transform_2d.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/mixed_product.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/mixed_product.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/norm.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/norm.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/normal.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/normal.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/normalize_dot.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/normalize_dot.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/number_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/number_precision.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/optimum_pow.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/optimum_pow.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/orthonormalize.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/orthonormalize.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/perpendicular.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/perpendicular.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/polar_coordinates.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/polar_coordinates.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/projection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/projection.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/quaternion.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/quaternion.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/range.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/raw_data.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/raw_data.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/rotate_normalized_axis.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/rotate_normalized_axis.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/rotate_vector.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/rotate_vector.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/scalar_multiplication.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/scalar_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/scalar_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/spline.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/spline.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/std_based_type.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/std_based_type.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/string_cast.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/string_cast.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/texture.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/texture.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/transform2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/transform2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/type_aligned.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/type_aligned.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/type_trait.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/type_trait.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/vec_swizzle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/vector_angle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/vector_angle.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/vector_query.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/vector_query.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/wrap.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/gtx/wrap.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/mat4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/matrix.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/packing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/common.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/exponential.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/geometric.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/integer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/matrix.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/packing.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/platform.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/trigonometric.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/simd/vector_relational.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/trigonometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/vec2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/vec3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/vec4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/glm/vector_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/my_shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/objreader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/shader.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/shader.vs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box/src/stb_image.h" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/box/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1711963237">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="c" value="1" />
+          <entry key="cpp" value="1" />
+          <entry key="fs" value="1" />
+          <entry key="h" value="2" />
+          <entry key="makefile" value="2" />
+          <entry key="txt" value="2" />
+          <entry key="vs" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="2" />
+          <entry key="ObjectiveC" value="4" />
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="3" />
+          <entry key="fs" value="3" />
+          <entry key="h" value="48" />
+          <entry key="txt" value="14" />
+          <entry key="vs" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="14" />
+          <entry key="ObjectiveC" value="51" />
+          <entry key="PLAIN_TEXT" value="6" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="991033409">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="LICENSE" value="1" />
+          <entry key="c" value="1" />
+          <entry key="cpp" value="5" />
+          <entry key="fragmen" value="1" />
+          <entry key="fs" value="2" />
+          <entry key="h" value="10" />
+          <entry key="makefile" value="2" />
+          <entry key="obj" value="1" />
+          <entry key="shade" value="1" />
+          <entry key="txt" value="1" />
+          <entry key="vs" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="1" />
+          <entry key="ObjectiveC" value="15" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Scratch" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="178" />
+          <entry key="fragmen" value="144" />
+          <entry key="fs" value="4" />
+          <entry key="h" value="623" />
+          <entry key="makefile" value="6" />
+          <entry key="txt" value="43" />
+          <entry key="verte" value="63" />
+          <entry key="vs" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="43" />
+          <entry key="ObjectiveC" value="801" />
+          <entry key="PLAIN_TEXT" value="232" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/objreader.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#13#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/new_ictc_triangulated.obj">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Shader</find>
+      <find>Sha</find>
+      <find>mouse</find>
+      <find>my</find>
+      <find>framebuffer_size_callback</find>
+      <find>cameraSpeed</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/box/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/box/src/my_shader.h" />
+        <option value="$PROJECT_DIR$/box/src/shader.vs" />
+        <option value="$PROJECT_DIR$/box/src/shader.fs" />
+        <option value="$PROJECT_DIR$/box/src/box.cpp" />
+        <option value="$PROJECT_DIR$/src/shader.vs" />
+        <option value="$PROJECT_DIR$/src/shader.fs" />
+        <option value="$PROJECT_DIR$/src/New_shader.h" />
+        <option value="$PROJECT_DIR$/src/shade" />
+        <option value="$PROJECT_DIR$/src/verte" />
+        <option value="$PROJECT_DIR$/src/fragmen" />
+        <option value="$PROJECT_DIR$/makefile" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/my_shader.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/objreader.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="538" />
+    <option name="height" value="741" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ICTC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="5thSEM_Graphics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ICTC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="5thSEM_Graphics" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ICTC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="5thSEM_Graphics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
+    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/triangle_multifile/main.cpp" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ICTC" RUN_TARGET_NAME="ICTC" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ICTC" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ICTC" TARGET_NAME="ICTC" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ICTC" RUN_TARGET_NAME="ICTC">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.ICTC" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8a55131-a068-4abe-bdef-3167d44a3936" name="Default Changelist" comment="" />
+      <created>1550485164022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550485164022</updated>
+      <workItem from="1550485165478" duration="4083000" />
+      <workItem from="1550490635569" duration="10000" />
+      <workItem from="1550490713247" duration="168000" />
+      <workItem from="1550490984852" duration="11000" />
+      <workItem from="1550491241019" duration="4567000" />
+      <workItem from="1550498104788" duration="5507000" />
+      <workItem from="1550504910164" duration="8626000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22972000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18057664" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32890365" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32890365" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29568106" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.33222592" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18057664" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32890365" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32890365" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29568106" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.33333334" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.fs" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/box/makefile" />
+    <entry file="file://$PROJECT_DIR$/box/src/objreader.h" />
+    <entry file="file://$PROJECT_DIR$/box/src/shader.vs" />
+    <entry file="file://$PROJECT_DIR$/box/src/shader.fs" />
+    <entry file="file://$PROJECT_DIR$/box/src/my_shader.h" />
+    <entry file="file://$PROJECT_DIR$/box/src/box.cpp" />
+    <entry file="file://$PROJECT_DIR$/box/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glad.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/CLionProjects/triangle_multifile/Shader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#35#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stb_image.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39476" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/CLionProjects/triangle_multifile/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1287">
+          <caret line="178" column="11" selection-start-line="178" selection-end-line="179" />
+          <folding>
+            <element signature="e#226#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/verte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fragmen">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/New_shader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="e#34#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my_shader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#58#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shader.vs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shader.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/new_ictc_triangulated.obj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objreader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#13#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

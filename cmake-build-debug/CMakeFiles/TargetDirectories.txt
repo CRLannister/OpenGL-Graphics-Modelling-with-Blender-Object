@@ -1,0 +1,3 @@
+/home/ashish/Documents/Codes/Sem5_Graphics/5thSEM_Graphics/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ashish/Documents/Codes/Sem5_Graphics/5thSEM_Graphics/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ashish/Documents/Codes/Sem5_Graphics/5thSEM_Graphics/cmake-build-debug/CMakeFiles/ICTC.dir

@@ -60,7 +60,8 @@ void File::import_obj(string path)
             for (int i=0;i<3;i++)
             {
               in >> a >>d>>d>>c;
-              indices.push_back(a);
+              indices.push_back(--a);
+	      
 
             }
             continue;

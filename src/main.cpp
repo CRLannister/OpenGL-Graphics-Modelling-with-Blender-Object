@@ -138,7 +138,10 @@ int main() {
 
         //model matrix
         glm::mat4 model = glm::mat4(1.0f);
-        model=glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+        glm::mat4 translate = glm::translate(glm::mat4(1.f), glm::vec3(0.f, -0.7f, 0.f));
+        model = translate * model;
+
+        model=glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         GLint modelLoc = glGetUniformLocation(ourShader.ID, "model");
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE,glm::value_ptr(model));
 

@@ -11,7 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8a55131-a068-4abe-bdef-3167d44a3936" name="Default Changelist" comment="" />
+    <list default="true" id="b8a55131-a068-4abe-bdef-3167d44a3936" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/ICTC.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ICTC.dir/src/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICTC" beforeDir="false" afterPath="$PROJECT_DIR$/ICTC" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/box/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +107,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="342" />
+          <entry key="cpp" value="383" />
           <entry key="fragmen" value="144" />
           <entry key="fs" value="4" />
           <entry key="h" value="623" />
@@ -115,7 +120,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="43" />
-          <entry key="ObjectiveC" value="965" />
+          <entry key="ObjectiveC" value="1006" />
           <entry key="PLAIN_TEXT" value="232" />
         </counts>
       </usages-collector>
@@ -123,6 +128,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/CLionProjects/triangle_multifile/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2745">
+              <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="141" column="34" lean-forward="true" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+              <folding>
+                <element signature="e#173#195#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,45 +159,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/CLionProjects/triangle_multifile/main.cpp">
+        <entry file="file://$PROJECT_DIR$/src/shader.fs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="48" column="47" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="47" />
-              <folding>
-                <element signature="e#226#248#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#173#195#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/objreader.h">
+        <entry file="file://$PROJECT_DIR$/src/shader.vs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="e#13#31#0" expanded="true" />
-              </folding>
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/new_ictc_triangulated.obj">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -185,6 +187,7 @@
       <find>framebuffer_size_callback</find>
       <find>cameraSpeed</find>
       <find>SCREEN_WIDTH</find>
+      <find>widthq</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -206,8 +209,8 @@
         <option value="$PROJECT_DIR$/src/fragmen" />
         <option value="$PROJECT_DIR$/makefile" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/my_shader.h" />
         <option value="$PROJECT_DIR$/src/objreader.h" />
+        <option value="$PROJECT_DIR$/src/my_shader.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
@@ -235,11 +238,6 @@
             <path>
               <item name="ICTC" type="b2602c69:ProjectViewProjectNode" />
               <item name="5thSEM_Graphics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICTC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="5thSEM_Graphics" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ICTC" type="b2602c69:ProjectViewProjectNode" />
@@ -306,7 +304,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24762000" />
+    <option name="totallyTimeSpent" value="25178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,7 +330,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32890365" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29568106" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3372093" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.33222592" />
@@ -408,46 +406,19 @@
     </entry>
     <entry file="file://$USER_HOME$/CLionProjects/triangle_multifile/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="48" column="47" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="47" />
-          <folding>
-            <element signature="e#226#248#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2745">
+          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/makefile" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/verte" />
     <entry file="file://$PROJECT_DIR$/src/fragmen" />
     <entry file="file://$PROJECT_DIR$/src/New_shader.h" />
     <entry file="file://$PROJECT_DIR$/src/my_shader.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#58#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader.vs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader.fs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="-1230">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -464,12 +435,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shader.vs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shader.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="165">
+          <caret line="141" column="34" lean-forward="true" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#173#195#0" expanded="true" />
           </folding>
         </state>

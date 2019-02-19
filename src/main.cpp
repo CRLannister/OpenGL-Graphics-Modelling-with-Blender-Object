@@ -26,12 +26,13 @@
 
 
 void processInput(GLFWwindow *window);
-void framebuffer_size_callback(GLFWwindow * window , int height , int width);
+void framebuffer_size_callback(GLFWwindow * window , int dummy_width, int dummy_height);
 void mouse_callback(GLFWwindow* window, double xpos , double ypos);
 
 //settings
-const int SCREEN_WIDTH=800;
-const int SCREEN_HEIGHT=600;
+const int SCREEN_WIDTH=1000;
+const int SCREEN_HEIGHT=700;
+int change_width, change_height;
 
 //camera
 glm::vec3 cameraPos = glm::vec3(0.0f,0.0f,3.0f);
@@ -129,6 +130,7 @@ int main() {
         //render
         glClearColor(0.5,0.5,0.5,1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glfwGetFramebufferSize( window, &change_width, &change_height );
 
         // Activate shader
         ourShader.use();
@@ -166,9 +168,11 @@ int main() {
 
 }
 
-void framebuffer_size_callback(GLFWwindow * window , int height , int width)
+void framebuffer_size_callback(GLFWwindow * window, int dummy_width, int dummy_height)
 {
-    glViewport(0,0,width ,height);
+    dummy_height = change_height;
+    dummy_width = change_width;
+    glViewport(0,0,dummy_width ,dummy_height);
     
 }
 

@@ -1,9 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 project(ICTC)
 
-INCLUDE_DIRECTORIES(/usr/include/)
-LINK_DIRECTORIES(/usr/lib)
+INCLUDE_DIRECTORIES(/usr/include/ Native_files/include)
+LINK_DIRECTORIES(/usr/lib Native_files/lib)
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ICTC main.cc Scene.cc Transformation.cc Graphics.cc Math.cc)
-TARGET_LINK_LIBRARIES(ICTC dl GL GLU glut X11 Xxf86vm Xrandr pthread Xi Xinerama Xcursor )
+file(GLOB CPP_SRC_FILES
+    "CPP_files/*.cc"
+)
+add_executable(ICTC main.cc ${CPP_SRC_FILES})
+TARGET_LINK_LIBRARIES(ICTC GL GLU glut X11 dl Xxf86vm Xrandr pthread Xi Xinerama Xcursor xcb)

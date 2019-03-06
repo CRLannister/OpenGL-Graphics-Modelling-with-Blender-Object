@@ -1,3 +1,0 @@
-/home/ashim/obj/CMakeFiles/rebuild_cache.dir
-/home/ashim/obj/CMakeFiles/ICTC.dir
-/home/ashim/obj/CMakeFiles/edit_cache.dir

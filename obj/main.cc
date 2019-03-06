@@ -1,10 +1,10 @@
-#include "Math.h"
+#include "header_files/Math.h"
 #include <iostream>
-#include <GL/glut.h>
-#include "Scene.h"
-#include "Graphics.h"
-#include "Transformation.h"
-#include "main.h"
+#include "GL/glut.h"
+#include "header_files/Scene.h"
+#include "header_files/Graphics.h"
+#include "header_files/Transformation.h"
+#include "header_files/main.h"
 using namespace std;
 
 // global variables
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(WINDOW.width, WINDOW.height);
-    glutCreateWindow("Manish Munikar");
+    glutCreateWindow("ICTC");
 
     glClearColor(0, 0, 0, 0);
     glMatrixMode(GL_PROJECTION);

@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/ICTC.dir/main.cc.o CMakeFiles/ICTC.dir/Scene.cc.o CMakeFiles/ICTC.dir/Transformation.cc.o CMakeFiles/ICTC.dir/Graphics.cc.o CMakeFiles/ICTC.dir/Math.cc.o  -o ICTC -ldl -lGL -lGLU -lglut -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lXinerama -lXcursor 

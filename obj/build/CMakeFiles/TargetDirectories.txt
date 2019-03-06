@@ -1,0 +1,3 @@
+/home/ashish/Documents/Codes/final_graphics/5thSem_Graphics/obj/build/CMakeFiles/rebuild_cache.dir
+/home/ashish/Documents/Codes/final_graphics/5thSem_Graphics/obj/build/CMakeFiles/ICTC.dir
+/home/ashish/Documents/Codes/final_graphics/5thSem_Graphics/obj/build/CMakeFiles/edit_cache.dir

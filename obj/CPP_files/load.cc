@@ -1,4 +1,4 @@
-#include "../header_files/Scene.h"
+#include "../header_files/load.h"
 #include <fstream>
 #include <stdexcept>
 #include <sstream>
@@ -78,5 +78,5 @@ void Scene::calculateNormal()
 
     // find mean normals of all vertices
     for (unsigned long i = 0; i < vertices.size(); i++)
-        normals[i] = (normals[i] / count[i]).normalize();
+        normals[i] = (normals[i]).normalize();
 }

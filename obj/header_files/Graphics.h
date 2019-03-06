@@ -2,7 +2,7 @@
 #define GRAPHICS_H
 #include "Math.h"
 #include <vector>
-#include "Scene.h"
+#include "load.h"
 #include "main.h"
 
 class Window {

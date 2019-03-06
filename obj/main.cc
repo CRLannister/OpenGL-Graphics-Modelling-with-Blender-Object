@@ -1,7 +1,7 @@
 #include "header_files/Math.h"
 #include <iostream>
 #include "GL/glut.h"
-#include "header_files/Scene.h"
+#include "header_files/load.h"
 #include "header_files/Graphics.h"
 #include "header_files/Transformation.h"
 #include "header_files/main.h"

@@ -211,7 +211,7 @@ typedef double		GLclampd;	/* double precision float in [0,1] */
 #define GL_T2F_C4F_N3F_V3F			0x2A2C
 #define GL_T4F_C4F_N3F_V4F			0x2A2D
 
-/* Matrix Mode */
+/* Mat Mode */
 #define GL_MATRIX_MODE				0x0BA0
 #define GL_MODELVIEW				0x1700
 #define GL_PROJECTION				0x1701

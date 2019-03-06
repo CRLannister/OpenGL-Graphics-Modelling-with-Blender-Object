@@ -1,79 +1,168 @@
 #include "../header_files/Transformation.h"
 #include <cassert>
 #include <cmath>
+#include "../header_files/Math.h"
 using namespace std;
 
-Vec3 translate(Vec3 p, float tx, float ty, float tz)
-{
-    return Vec3(p.x + tx, p.y + ty, p.z + tz);
+Vec3 RotateX(Vec3& Point,float theta){
+    Mat T(4,4); //Transformation matrix
+    Mat P(4,1); //Point matrix
+    float angle = theta/180*pi;
+    //Transformation matrix
+    T(0,0) = 1;     T(0,1) = 0;         T(0,2) = 0;             T(0,3) = 0;
+    T(1,0) = 0;     T(1,1) = cos(angle);T(1,2) = -sin(angle);   T(1,3) = 0;
+    T(2,0) = 0;     T(2,1) = sin(angle);T(2,2) = cos(angle);    T(2,3) = 0;
+    T(3,0) = 0;     T(3,1) = 0;         T(3,2) = 0;             T(3,3) = 1;
+    //Point in matrix form
+    P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
+
+    P = T*P;
+    Point.x = P(0,0);
+    Point.y = P(0,1);
+    Point.z = P(0,2);
+
+    return Point;
+
 }
 
-Vec3 rotate_y(Vec3 p, float angle)
-{
-    angle = deg2rad(angle);
+Vec3 RotateY(Vec3& Point,float theta){
+    Mat T(4,4); //Transformation matrix
+    Mat P(4,1); //Point matrix
+    float angle = theta/180*pi;
+    //Transformation matrix
+    T(0,0) = cos(angle);    T(0,1) = 0;         T(0,2) = sin(angle);    T(0,3) = 0;
+    T(1,0) = 0;             T(1,1) = 1;         T(1,2) = 0;             T(1,3) = 0;
+    T(2,0) = -sin(angle);   T(2,1) = 0;         T(2,2) = cos(angle);    T(2,3) = 0;
+    T(3,0) = 0;             T(3,1) = 0;         T(3,2) = 0;             T(3,3) = 1;
+    //Point in matrix form
+    P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
 
-    float x = p.x*cos(angle) + p.z*sin(angle);
-    float y = p.y;
-    float z = -p.x*sin(angle) + p.z*cos(angle);
+    P = T*P;
+    Point.x = P(0,0);
+    Point.y = P(0,1);
+    Point.z = P(0,2);
 
-    return Vec3(x,y,z);
+    return Point;
+
 }
 
-Vec3 rotate(Vec3 p, float angle, Vec3 axis)
-{
-    // calculate angles
-    float theta = deg2rad(angle);
-    float alpha = theta;
-    float beta = theta;
-//    float alpha = atan(axis.x / axis.y);
-//    float beta = atan(sqrt(pow(axis.x, 2) + pow(axis.y, 2)) / axis.z);
 
-    // construct point matrix
-    Mat P(4,1);
-    P.set({p.x, p.y, p.z, 1});
+Vec3 RotateZ(Vec3& Point,float theta){
+    Mat T(4,4); //Transformation matrix
+    Mat P(4,1); //Point matrix
+    float angle = theta/180*pi;
+    //Transformation matrix
+    T(0,0) = cos(angle);    T(0,1) = -sin(theta);       T(0,2) = 0;    T(0,3) = 0;
+    T(1,0) = sin(angle);    T(1,1) = cos(theta);        T(1,2) = 0;    T(1,3) = 0;
+    T(2,0) = 0;             T(2,1) = 0;                 T(2,2) = 1;    T(2,3) = 0;
+    T(3,0) = 0;             T(3,1) = 0;                 T(3,2) = 0;    T(3,3) = 1;
+    //Point in matrix form
+    P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
 
-    // construct composite transformation matrix
-    Mat T1(4,4), T2(4,4), T3(4,4), T4(4,4), T5(4,4);
-    T1.set({cos(alpha), -sin(alpha), 0, 0,
-            sin(alpha), cos(alpha), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1});
-    T2.set({1, 0, 0, 0,
-            0, cos(beta), -sin(beta), 0,
-            0, sin(beta), cos(beta), 0,
-            0, 0, 0, 1});
-//    T3.set({cos(theta), -sin(theta), 0, 0,
-//            sin(theta), cos(theta), 0, 0,
-//            0, 0, 1, 0,
-//            0, 0, 0, 1});
-    T3.set({cos(theta), 0, sin(theta), 0,
-            0, 1, 0, 0,
-            -sin(theta), 0, cos(theta), 0,
-            0, 0, 0, 1});
-    T4.set({1, 0, 0, 0,
-            0, cos(-beta), -sin(-beta), 0,
-            0, sin(-beta), cos(-beta), 0,
-            0, 0, 0, 1});
-    T5.set({cos(-alpha), -sin(-alpha), 0, 0,
-            sin(-alpha), cos(-alpha), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1});
-//    Mat T = T5*T4*T3*T2*T1;
+    P = T*P;
+    Point.x = P(0,0);
+    Point.y = P(0,1);
+    Point.z = P(0,2);
 
+    return Point;
+
+
+}
+
+Vec3 translate(Vec3& Point,const Vec3& tMat){
+    Mat T(4,4); //Transformation matrix
+    Mat P(4,1); //Point matrix
+    //Transformation matrix
+    T(0,0) = 1;    T(0,1) = 0;      T(0,2) = 0;    T(0,3) = tMat.x;
+    T(1,0) = 0;    T(1,1) = 1;      T(1,2) = 0;    T(1,3) = tMat.y;
+    T(2,0) = 0;    T(2,1) = 0;      T(2,2) = 1;    T(2,3) = tMat.z;
+    T(3,0) = 0;    T(3,1) = 0;      T(3,2) = 0;    T(3,3) = 1;
+    //Point in matrix form
+    P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
+
+    P = T*P;
+    Point.x = P(0,0);
+    Point.y = P(0,1);
+    Point.z = P(0,2);
+
+    return Point;
+
+}
+
+Vec2 world_to_pixel(const Vec3& source ,const Vec3& camera, const Vec3& LookTo,float planeWidth, float planeHeight, float winWidth, float winHeight){
+    //first determine the World to Camera transforming matrix
+    Mat WtoC(4,4);
+    //for that use the concept of N, U and V unit vectors
+    Vec3 N,U,V(0,1,0);
+
+    //calculate the N unit vector
+    //N is the vector from LookTo point to Camera point
+    N = (camera-LookTo).normalize();
+//    N = N/ N.mag();
+
+    //U = V X N
+    U = cross(V,N).normalize();
+//    U = U / U.mag();
+
+
+    //readjust the V vector
+    V = cross(N,U).normalize();
+//    V = V / V.mag();
+
+    //Transpose matrix from World co-ordinate to View co-ordinate
     Mat T(4,4);
-    if (axis.x == 0 && axis.y == 0){
-        T = T1;
-    }
-    else if (axis.z == 0 && axis.y == 0){
-        T = T2;
-    }
-    else{
-        T = T3;
-    }
+    T(0,0) = 1 ; T(0,1) = 0; T(0,2) = 0; T(0,3) = -camera.x;
+    T(1,0) = 0 ; T(1,1) = 1; T(1,2) = 0; T(1,3) = -camera.y;
+    T(2,0) = 0 ; T(2,1) = 0; T(2,2) = 1; T(2,3) = -camera.z;
+    T(3,0) = 0 ; T(3,1) = 0; T(3,2) = 0; T(3,3) = 1;
 
-    // get result matrix
-    p = T * p;
-    return p;
+    //Rotation Matrix
+    Mat R(4,4);
+    R(0,0) = U[0] ; R(0,1) = U[1]; R(0,2) = U[2]; R(0,3) = 0;
+    R(1,0) = V[0] ; R(1,1) = V[1]; R(1,2) = V[2]; R(1,3) = 0;
+    R(2,0) = N[0] ; R(2,1) = N[1]; R(2,2) = N[2]; R(2,3) = 0;
+    R(3,0) = 0 ; R(3,1) = 0; R(3,2) = 0; R(3,3) = 1;
+
+
+    //Calculating the WtoC matrix W = T*R (rotate and then translate)
+    WtoC = R*T;
+//
+//    std::cout << std::endl << " MATRIX START" << std::endl;
+//    WtoC.print();
+//    std::cout <<"MATRIX END"<< std::endl << std::endl;
+
+    Mat S(4,1); //The source point in matrix form
+    S(0) = source.x ; S(1) = source.y; S(2) = source.z ; S(3) = 1;
+
+    S = WtoC * S;
+    //S now represents the camera co-ordinate system's values
+    //calculate the screen pixels
+
+    // Perspective projection:
+
+    float zprp = 1;
+    Mat Persp(4,4);
+    Mat Projected(4,1);
+    Persp(0,0) = zprp ; Persp(0,1) = 0; Persp(0,2) = 0; Persp(0,3) = 0;
+    Persp(1,0) = 0 ; Persp(1,1) = zprp; Persp(1,2) = 0; Persp(1,3) = 0;
+    Persp(2,0) = 0 ; Persp(2,1) = 0; Persp(2,2) = 0; Persp(2,3) = 0;
+    Persp(3,0) = 0 ; Persp(3,1) = 0; Persp(3,2) = -1; Persp(3,3) = zprp;
+    Projected = Persp * S;
+
+    //normalize the screen pixels
+    Vec2 retVal;
+    retVal.x = Projected(0)/Projected(3);
+    retVal.y = Projected(1)/Projected(3);
+    retVal.z = S(2);
+
+    retVal.x = (retVal.x + planeWidth*0.5)/planeWidth;
+    retVal.y = (retVal.y + planeHeight*0.5)/planeHeight;
+
+    //now to original screen pos in computer
+    retVal.x = (int)(retVal.x * winWidth);
+    retVal.y = (int)((1-retVal.y) * winHeight);
+
+    return retVal;
 }
 
 Vec2 project(Vec3 p, float width, float height, float angle_x)
@@ -91,7 +180,7 @@ Vec2 project(Vec3 p, float width, float height, float angle_x)
 }
 
 Vec2 world_to_pixel(Vec3 p, Vec3 cam, Vec3 target,
-        float win_width, float win_height, float angle_x)
+                    float win_width, float win_height, float angle_x)
 {
     // calculate u, v, n vectors
     Vec3 n = (cam - target).normalize();
@@ -99,7 +188,8 @@ Vec2 world_to_pixel(Vec3 p, Vec3 cam, Vec3 target,
     Vec3 v = cross(n, u).normalize();
 
     // translate cam to origin
-    p = translate(p, -cam.x, -cam.y, -cam.z);
+    Vec3 temp_cam = {-cam.x, -cam.y, -cam.z};
+    p = translate(p, temp_cam);
     //cout << "Translated point = " << p << endl; // DEBUG
 
     // rotate to align the axes
@@ -114,3 +204,4 @@ Vec2 world_to_pixel(Vec3 p, Vec3 cam, Vec3 target,
 
     return project(p, win_width, win_height, angle_x);
 }
+

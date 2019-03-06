@@ -135,7 +135,7 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
         // get the coordinate of vertex
         Vec3 point3d = scene.vertices[i];
         // rotate the vertex about world y-axis
-        point3d = rotate(point3d, angle, {0,1,0});
+        point3d = RotateY(point3d, angle);
         // project
         Vec2 point2d = world_to_pixel(point3d, camera, target, width, height, angle_x);
         vertices2d.push_back(point2d);
@@ -169,10 +169,11 @@ void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
         point3d = scene.vertices[i];
 
         // rotate the point in world axis
-        point3d = rotate(point3d, angle, {0,1,0});
+        point3d = RotateY(point3d, angle);
 
         // translate camera to origin
-        point3d = translate(point3d, -camera.x, -camera.y, -camera.z);
+        Vec3 temp_camera ={-camera.x, -camera.y, -camera.z};
+        point3d = translate(point3d, temp_camera);
 
         // calculate u,v,n vectors
         n = (camera - target).normalize();
@@ -192,7 +193,7 @@ void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
         N = scene.normals[i].normalize();
         L = (light - point3d).normalize();
         d = (light - point3d).mag();
-        R = (2*dot(N,L)*N - L).normalize();
+        R = (N*(dot(N,L)*2) - L).normalize();
         V = (camera - point3d).normalize();
         //H = (L + V).normalize();
         float intensity = 0.2 + 0.7*dot(N,L) + powf(dot(R,V), 50);

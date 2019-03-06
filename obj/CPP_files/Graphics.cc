@@ -48,6 +48,9 @@ void Window::setPixel(int x, int y, float z, const Vec3& c, float i)
     glEnd();
 }
 
+
+//DDA Algorithm Implementation
+
 void Window::drawLine(const Vec2& p1, const Vec2& p2, const Vec3& c)
 {
 #ifdef SOLID
@@ -95,7 +98,7 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
         x2 = v[0].x + (y - v[0].y) * (v[2].x - v[0].x) / (v[2].y - v[0].y);
         z2 = v[0].z + (y - v[0].y) * (v[2].z - v[0].z) / (v[2].y - v[0].y);
         i2 = v[0].i + (y - v[0].y) * (v[2].i - v[0].i) / (v[2].y - v[0].y);
-        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), {1,1,0});
+        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), {1,0,0});
     }
 
     for (y = v[1].y; y <= v[2].y; y++) {
@@ -106,7 +109,7 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
         x2 = v[0].x + (y - v[0].y) * (v[2].x - v[0].x) / (v[2].y - v[0].y);
         z2 = v[0].z + (y - v[0].y) * (v[2].z - v[0].z) / (v[2].y - v[0].y);
         i2 = v[0].i + (y - v[0].y) * (v[2].i - v[0].i) / (v[2].y - v[0].y);
-        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), {1,1,0});
+        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), {1,0,0});
     }
 }
 

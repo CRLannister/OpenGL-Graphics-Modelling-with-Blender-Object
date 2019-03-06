@@ -8,10 +8,11 @@
 using namespace std;
 
 // global variables
-Vec3 CAMERA(0, 0, 20), TARGET(0, 0, 0), LIGHT(10, 10, 10);
+Vec3 CAMERA(0, 0, 40), TARGET(0, 0, 0), LIGHT(10, 10, 10);
 Scene SCENE;
 float FIELD_OF_VIEW = 45, ANGLE = 0;
 Window WINDOW;
+int type = 1;
 
 void display();
 void keyboard(unsigned char key, int x, int y);
@@ -20,7 +21,7 @@ void special(int key, int x, int y);
 int main(int argc, char **argv)
 {
     SCENE.load(string(argv[1]));
-    WINDOW = Window(800, 600, -1, -200);
+    WINDOW = Window(1366, 768, -1, -200);
 
     // initialize GL
     glutInit(&argc, argv);
@@ -43,16 +44,20 @@ int main(int argc, char **argv)
 void display()
 {
     WINDOW.clear();
-#ifdef SOLID
+    if(type == 1)
     WINDOW.render(SCENE, CAMERA, TARGET, LIGHT, FIELD_OF_VIEW, ANGLE);
-#else
+    else if(type == 2)
     WINDOW.wireframe(SCENE, CAMERA, TARGET, FIELD_OF_VIEW, ANGLE);
-#endif
     WINDOW.refresh();
 }
 
 void keyboard(unsigned char key, int x, int y)
 {
+    if (key == 'x')
+        type = 1;
+    if (key == 'z')
+        type = 2;
+
     if (key == 27)
         exit(EXIT_SUCCESS);
 
@@ -94,6 +99,7 @@ void keyboard(unsigned char key, int x, int y)
         TARGET.y--;
     else if (key == 'y')
         TARGET.y++;
+
 
     glutPostRedisplay();
 }

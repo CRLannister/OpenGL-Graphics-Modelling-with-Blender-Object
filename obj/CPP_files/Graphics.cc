@@ -137,7 +137,8 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
         // rotate the vertex about world y-axis
         point3d = RotateY(point3d, angle);
         // project
-        Vec2 point2d = world_to_pixel(point3d, camera, target, width, height, angle_x);
+        Vec3 points3d = world_to_pixel(point3d, camera, target, width, height );
+        Vec2 point2d = project(points3d,width,height,angle_x);
         vertices2d.push_back(point2d);
     }
 
@@ -171,23 +172,25 @@ void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
         // rotate the point in world axis
         point3d = RotateY(point3d, angle);
 
-        // translate camera to origin
-        Vec3 temp_camera ={-camera.x, -camera.y, -camera.z};
-        point3d = translate(point3d, temp_camera);
 
-        // calculate u,v,n vectors
-        n = (camera - target).normalize();
-        u = cross({0,1,0}, n).normalize();
-        v = cross(n, u).normalize();
-
-        // align camera axes to world axes
-        M.set({u.x, u.y, u.z, 0,
-               v.x, v.y, v.z, 0,
-               n.x, n.y, n.z, 0,
-               0, 0, 0, 1});
-        P.set({point3d.x, point3d.y, point3d.z, 1});
-        P = M*P;
-        point3d = {P(0), P(1), P(2)}; // this is in camera coordinates
+        point3d = world_to_pixel(point3d, camera , target, width , height);  // this is in camera coordinates
+//        // translate camera to origin
+//        Vec3 temp_camera ={-camera.x, -camera.y, -camera.z};
+//        point3d = translate(point3d, temp_camera);
+//
+//        // calculate u,v,n vectors
+//        n = (camera - target).normalize();
+//        u = cross({0,1,0}, n).normalize();
+//        v = cross(n, u).normalize();
+//
+//        // align camera axes to world axes
+//        M.set({u.x, u.y, u.z, 0,
+//               v.x, v.y, v.z, 0,
+//               n.x, n.y, n.z, 0,
+//               0, 0, 0, 1});
+//        P.set({point3d.x, point3d.y, point3d.z, 1});
+//        P = M*P;
+//        point3d = {P(0), P(1), P(2)}; // this is in camera coordinates
 
         // calculate point intensity
         N = scene.normals[i].normalize();

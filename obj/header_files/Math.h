@@ -12,7 +12,6 @@ public: // data
 
 public: // constructor
     Vec3(float x=0, float y=0, float z=0): x(x),y(y),z(z) {}
-    Vec3(const std::initializer_list<float>& data);
 
 public: // operators
     friend std::ostream& operator<<(std::ostream&, const Vec3&);
@@ -69,6 +68,7 @@ public: // operator
     friend Mat operator-(const Mat&, const Mat&);
     friend Mat operator*(const Mat&, const Mat&);
     friend Mat operator*(const Mat&, float d);
+    friend Vec3 operator*(const Mat& A, Vec3 B);
     friend Mat operator/(const Mat&, float d);
     friend Mat operator*(float d, const Mat& A) { return A*d; }
 

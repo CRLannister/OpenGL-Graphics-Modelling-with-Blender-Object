@@ -5,7 +5,7 @@
 
 // conversions
 inline float deg2rad(float deg) { return deg*M_PI/180; }
-inline float rad2deg(float rad) { return rad*180/M_PI; }
+//inline float rad2deg(float rad) { return rad*180/M_PI; }
 
 Vec3 translate(Vec3 p, float tx, float ty, float tz);
 Vec3 rotate_y(Vec3 p, float angle);

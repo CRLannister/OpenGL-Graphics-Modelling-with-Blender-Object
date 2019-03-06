@@ -2,12 +2,6 @@
 #include <stdexcept>
 using namespace std;
 
-Vec3::Vec3(const initializer_list<float>& data)
-{
-    vector<float> v = data;
-    x = v[0]; y = v[1]; z = v[2];
-}
-
 ostream& operator<<(ostream& o, const Vec3& v)
 {
     return o << "(" << v.x << ", " << v.y << ", " << v.z << ")";
@@ -93,6 +87,19 @@ Mat operator*(const Mat& A, float d)
     return R;
 }
 
+Vec3 operator*(const Mat& A, Vec3 B)
+{
+    Vec3 R = B;
+    for (int i = 0; i < A.row; i++){
+        for(int j =0; j<3; j++){
+            R[i] += R[i] + A(i,j)*B[j];
+        }
+    }
+
+    return R;
+}
+
+
 Mat operator/(const Mat& A, float d)
 {
     if (d == 0) throw runtime_error("division of matrix by zero");
@@ -111,13 +118,16 @@ float Mat::mag() const
     return sqrt(sum);
 }
 
-float dot(const Mat& A, const Mat& B)
-{
-    if (A.row != B.row or A.col != B.col)
-        throw invalid_argument("invalid sized matrices to dot product");
 
-    float sum = 0;
-    for (unsigned long i = 0; i < A.data.size(); i++)
-        sum += A(i)*B(i);
-    return sum;
-}
+//Matrix dot product
+
+//float dot(const Mat& A, const Mat& B)
+//{
+//    if (A.row != B.row or A.col != B.col)
+//        throw invalid_argument("invalid sized matrices to dot product");
+//
+//    float sum = 0;
+//    for (unsigned long i = 0; i < A.data.size(); i++)
+//        sum += A(i)*B(i);
+//    return sum;
+//}

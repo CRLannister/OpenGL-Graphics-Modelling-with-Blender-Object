@@ -26,10 +26,12 @@ void Window::start()
     glutMainLoop();
 }
 
-void Window::setPixel(const Vec2& p, const Vec3& c, float i)
-{
-    setPixel(ROUND(p.x), ROUND(p.y), p.z, c, i);
-}
+//function overloading not used
+
+//void Window::setPixel(const Vec2& p, const Vec3& c, float i)
+//{
+//    setPixel(ROUND(p.x), ROUND(p.y), p.z, c, i);
+//}
 
 void Window::setPixel(int x, int y, float z, const Vec3& c, float i)
 {
@@ -38,9 +40,14 @@ void Window::setPixel(int x, int y, float z, const Vec3& c, float i)
         return;
 
     // check z buffer
-    if (z <= zbuffer[x*height + y] or z < farz or z > nearz)
+//    if (z <= zbuffer[x*height + y] or z < farz or z > nearz)
+//        return;
+//    zbuffer[x*height + y] = z;
+
+    if (z <= zbuffer[width * y + x] or z < farz or z > nearz)
         return;
-    zbuffer[x*height + y] = z;
+    zbuffer[width * y + x] = z;
+
 
     glColor3f(c.x*i, c.y*i, c.z*i);
     glBegin(GL_POINTS);
@@ -91,7 +98,10 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
 
     float y, x1, z1, i1, x2, z2, i2;
     for (y = v[0].y; y < v[1].y; y++) {
-        if (v[1].y == v[0].y) break;
+        if (v[1].y == v[0].y) {
+            drawLine(Vec2(v[0].x, y, v[0].z, v[0].i), Vec2(v[1].x, y, v[1].z, v[1].i), {1, 0, 0});
+            break;
+        }
         x1 = v[0].x + (y - v[0].y) * (v[1].x - v[0].x) / (v[1].y - v[0].y);
         z1 = v[0].z + (y - v[0].y) * (v[1].z - v[0].z) / (v[1].y - v[0].y);
         i1 = v[0].i + (y - v[0].y) * (v[1].i - v[0].i) / (v[1].y - v[0].y);
@@ -102,7 +112,10 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
     }
 
     for (y = v[1].y; y <= v[2].y; y++) {
-        if (v[2].y == v[1].y) break;
+        if (v[2].y == v[1].y) {
+            drawLine(Vec2(v[1].x, y, v[1].z, v[1].i), Vec2(v[2].x, y, v[2].z, v[2].i), {1, 0, 0});
+            break;
+        }
         x1 = v[1].x + (y - v[1].y) * (v[2].x - v[1].x) / (v[2].y - v[1].y);
         z1 = v[1].z + (y - v[1].y) * (v[2].z - v[1].z) / (v[2].y - v[1].y);
         i1 = v[1].i + (y - v[1].y) * (v[2].i - v[1].i) / (v[2].y - v[1].y);
@@ -122,7 +135,7 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
         // get the coordinate of vertex
         Vec3 point3d = scene.vertices[i];
         // rotate the vertex about world y-axis
-        point3d = rotate_y(point3d, angle);
+        point3d = rotate(point3d, angle, {0,1,0});
         // project
         Vec2 point2d = world_to_pixel(point3d, camera, target, width, height, angle_x);
         vertices2d.push_back(point2d);
@@ -139,9 +152,9 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
         Vec2 p2 = vertices2d[index2];
         Vec2 p3 = vertices2d[index3];
         // draw
-        drawLine(p1, p2);
-        drawLine(p2, p3);
-        drawLine(p3, p1);
+        drawLine(p1, p2,{1,0,0});
+        drawLine(p2, p3,{1,0,0});
+        drawLine(p3, p1,{1,0,0});
     }
 }
 
@@ -156,7 +169,7 @@ void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
         point3d = scene.vertices[i];
 
         // rotate the point in world axis
-        point3d = rotate_y(point3d, angle);
+        point3d = rotate(point3d, angle, {0,1,0});
 
         // translate camera to origin
         point3d = translate(point3d, -camera.x, -camera.y, -camera.z);

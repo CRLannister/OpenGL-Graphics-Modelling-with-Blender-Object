@@ -19,7 +19,7 @@ public:
     void refresh();
     void start();
 
-    void setPixel(const Vec2& p, const Vec3& c={1,1,1}, float i=1);
+//    void setPixel(const Vec2& p, const Vec3& c={1,1,1}, float i=1);
     void setPixel(int x, int y, float d, const Vec3& c={1,1,1}, float i=1);
 
     void drawLine(const Vec2& p1, const Vec2& p2, const Vec3& c={1,1,1});

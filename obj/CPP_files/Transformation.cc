@@ -89,13 +89,34 @@ Vec3 translate(Vec3& Point,const Vec3& tMat){
 
 }
 
+Vec3 Reflect_Y(Vec3& Point,const Vec3& tMat){
+    Mat T(4,4); //Transformation matrix
+    Mat P(4,1); //Point matrix
+    //Transformation matrix
+    T(0,0) = 0;    T(0,1) = 1;      T(0,2) = 0;    T(0,3) = tMat.x;
+    T(1,0) = 1;    T(1,1) = 0;      T(1,2) = 0;    T(1,3) = tMat.y;
+    T(2,0) = 0;    T(2,1) = 0;      T(2,2) = 1;    T(2,3) = tMat.z;
+    T(3,0) = 0;    T(3,1) = 0;      T(3,2) = 0;    T(3,3) = 1;
+    //Point in matrix form
+    P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
+
+    P = T*P;
+    Point.x = P(0,0);
+    Point.y = P(0,1);
+    Point.z = P(0,2);
+
+    return Point;
+
+}
+
+
 Vec3 Scale(Vec3& Point,float scale){
     Mat T(4,4); //Transformation matrix
     Mat P(4,1); //Point matrix
     //Transformation matrix
     T(0,0) = scale;    T(0,1) = 0;      T(0,2) = 0;    T(0,3) = 0;
     T(1,0) = 0;    T(1,1) = scale;      T(1,2) = 0;    T(1,3) = 0;
-    T(2,0) = 0;    T(2,1) = 0;      T(2,2) = 1;    T(2,3) = 0;
+    T(2,0) = 0;    T(2,1) = 0;      T(2,2) = scale;    T(2,3) = 0;
     T(3,0) = 0;    T(3,1) = 0;      T(3,2) = 0;    T(3,3) = 1;
     //Point in matrix form
     P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
@@ -206,9 +227,20 @@ Vec2 project(Vec3 p, float width, float height, float angle_x)
     Mat Projected(4,1);
     Persp(0,0) = zprp ; Persp(0,1) = 0; Persp(0,2) = 0; Persp(0,3) = 0;
     Persp(1,0) = 0 ; Persp(1,1) = zprp; Persp(1,2) = 0; Persp(1,3) = 0;
-    Persp(2,0) = 0 ; Persp(2,1) = 0; Persp(2,2) = 0; Persp(2,3) = 0;
-    Persp(3,0) = 0 ; Persp(3,1) = 0; Persp(3,2) = -1; Persp(3,3) = zprp;
+    Persp(2,0) = 0 ; Persp(2,1) = 0; Persp(2,2) = zprp; Persp(2,3) = 0;
+    Persp(3,0) = 0 ; Persp(3,1) = 0; Persp(3,2) = -1; Persp(3,3) = -zprp;
     Projected = Persp * S;
+    p.x = Projected(0);
+    p.y = Projected(1);
+    p.z = Projected(2);
+
+//    Projected = Reflect_Y(p,p);
+
+    p = translate(p,{0,3,0});
+    Projected(0) = p.x;
+    Projected(1) = p.y;
+    Projected(2) = p.z;
+
 
     //normalize the screen pixels
     Vec2 retVal;
@@ -216,13 +248,13 @@ Vec2 project(Vec3 p, float width, float height, float angle_x)
     retVal.y = Projected(1)/Projected(3);
     retVal.z = S(2);
 
-    float  planeWidth = .3;
+    float  planeWidth = .5;
     float planeHeight = .3;
     retVal.x = (retVal.x + planeWidth*0.5)/planeWidth;
     retVal.y = (retVal.y + planeHeight*0.5)/planeHeight;
 
     //now to original screen pos in computer
-    retVal.x = (int)(retVal.x * width);
+    retVal.x = (int)((1-retVal.x) * width);
     retVal.y = (int)((1-retVal.y) * height);
 
     return retVal;

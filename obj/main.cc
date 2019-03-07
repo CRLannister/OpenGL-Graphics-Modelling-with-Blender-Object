@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     glutInitWindowSize(WINDOW.width, WINDOW.height);
     glutCreateWindow("ICTC");
 
-    glClearColor(0, 0, 0, 0);
+    glClearColor(1, 1, 1, 0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0, WINDOW.width, 0, WINDOW.height);

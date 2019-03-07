@@ -12,6 +12,8 @@ Vec3 RotateZ(Vec3& Point,float theta);
 Vec3 translate(Vec3& Point,const Vec3& tMat);
 Vec3 Scale(Vec3& Point,float scale);
 Vec2 project(Vec3 p, float width, float height, float angle_x=45);
+Vec3 Reflect_Y(Vec3& Point,const Vec3& tMat);
+
 
 Vec3 world_to_pixel(Vec3 p, Vec3 cam, Vec3 target, float win_width, float win_height, float angle_x=45);
 

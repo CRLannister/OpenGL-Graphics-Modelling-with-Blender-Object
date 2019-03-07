@@ -3,6 +3,8 @@
 #include <cassert>
 using namespace std;
 
+Vec3 ICTC_color = {1,0.4,0};
+
 Window::Window(int w, int h, float nearz, float farz):
     width(w), height(h), nearz(nearz), farz(farz)
 {
@@ -99,7 +101,7 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
     float y, x1, z1, i1, x2, z2, i2;
     for (y = v[0].y; y < v[1].y; y++) {
         if (v[1].y == v[0].y) {
-            drawLine(Vec2(v[0].x, y, v[0].z, v[0].i), Vec2(v[1].x, y, v[1].z, v[1].i), {1, 0, 0});
+            drawLine(Vec2(v[0].x, y, v[0].z, v[0].i), Vec2(v[1].x, y, v[1].z, v[1].i), ICTC_color);
             break;
         }
         x1 = v[0].x + (y - v[0].y) * (v[1].x - v[0].x) / (v[1].y - v[0].y);
@@ -108,12 +110,12 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
         x2 = v[0].x + (y - v[0].y) * (v[2].x - v[0].x) / (v[2].y - v[0].y);
         z2 = v[0].z + (y - v[0].y) * (v[2].z - v[0].z) / (v[2].y - v[0].y);
         i2 = v[0].i + (y - v[0].y) * (v[2].i - v[0].i) / (v[2].y - v[0].y);
-        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), {1,0,0});
+        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), ICTC_color);
     }
 
     for (y = v[1].y; y <= v[2].y; y++) {
         if (v[2].y == v[1].y) {
-            drawLine(Vec2(v[1].x, y, v[1].z, v[1].i), Vec2(v[2].x, y, v[2].z, v[2].i), {1, 0, 0});
+            drawLine(Vec2(v[1].x, y, v[1].z, v[1].i), Vec2(v[2].x, y, v[2].z, v[2].i),ICTC_color);
             break;
         }
         x1 = v[1].x + (y - v[1].y) * (v[2].x - v[1].x) / (v[2].y - v[1].y);
@@ -122,7 +124,7 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
         x2 = v[0].x + (y - v[0].y) * (v[2].x - v[0].x) / (v[2].y - v[0].y);
         z2 = v[0].z + (y - v[0].y) * (v[2].z - v[0].z) / (v[2].y - v[0].y);
         i2 = v[0].i + (y - v[0].y) * (v[2].i - v[0].i) / (v[2].y - v[0].y);
-        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), {1,0,0});
+        drawLine(Vec2(x1,y,z1,i1), Vec2(x2,y,z2,i2), ICTC_color);
     }
 }
 
@@ -167,9 +169,9 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
         Vec2 p2 = vertices2d[index2];
         Vec2 p3 = vertices2d[index3];
         // draw
-        drawLine(p1, p2,{1,0,0});
-        drawLine(p2, p3,{1,0,0});
-        drawLine(p3, p1,{1,0,0});
+        drawLine(p1, p2,ICTC_color);
+        drawLine(p2, p3,ICTC_color);
+        drawLine(p3, p1,ICTC_color);
     }
 }
 
@@ -223,7 +225,7 @@ void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
         R = (N*(dot(N,L)*2) - L).normalize();
         V = (camera - point3d).normalize();
         //H = (L + V).normalize();
-        float intensity = 0.2 + 0.7*dot(N,L) + powf(dot(R,V), 50);
+        float intensity = 0.4 + 0.5*dot(N,L) + powf(dot(R,V), 50);
         if (intensity > 1) intensity = 1;
 
         // project to screen coordinates

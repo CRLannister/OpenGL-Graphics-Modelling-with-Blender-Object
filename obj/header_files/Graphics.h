@@ -27,10 +27,10 @@ public:
     void fillTriangle(const Vec2&, const Vec2&, const Vec2&);
 
     void wireframe(const Scene& scene, const Vec3& camera={0,0,10},
-            const Vec3& target={0,0,0}, float angle_x=50, float angle=0);
+            const Vec3& target={0,0,0}, float angle_x=50, float scale=1.0, int axis_type=2, float Angle_x=0, float angle_y=0, float angle_z=0);
     void render(const Scene& scene, const Vec3& camera={0,0,10},
             const Vec3& target={0,0,0}, const Vec3& light={10,10,10},
-            float angle_x=45, float angle=0);
+            float angle_x=45, float scale=1.0, int axis_type=2, float Angle_x=0, float angle_y=0, float angle_z=0);
 };
 
 #endif // GRAPHICS_H

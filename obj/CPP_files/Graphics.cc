@@ -127,7 +127,7 @@ void Window::fillTriangle(const Vec2& v1, const Vec2& v2, const Vec2& v3)
 }
 
 void Window::wireframe(const Scene& scene, const Vec3& camera,
-        const Vec3& target, float angle_x, float angle)
+        const Vec3& target, float angle_x, float scale, int axis_type,  float Angle_x, float angle_y, float angle_z)
 {
     // project points to 2d
     vector<Vec2> vertices2d;
@@ -135,9 +135,23 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
         // get the coordinate of vertex
         Vec3 point3d = scene.vertices[i];
         // rotate the vertex about world y-axis
-        point3d = RotateY(point3d, angle);
+//        if(axis_type == 1)
+//            point3d = RotateX(point3d, angle);
+//        if(axis_type == 2)
+//            point3d = RotateY(point3d, angle);
+//        if(axis_type == 3)
+//            point3d = RotateZ(point3d, angle);
+
+        point3d = RotateX(point3d, Angle_x);
+        point3d = RotateY(point3d, angle_y);
+        point3d = RotateZ(point3d, angle_z);
+
+
+        point3d = Scale(point3d,scale);
         // project
         Vec3 points3d = world_to_pixel(point3d, camera, target, width, height );
+//        Vec2 point2d = world_to_pixel_wireFrame(point3d, camera, target, width, height );
+
         Vec2 point2d = project(points3d,width,height,angle_x);
         vertices2d.push_back(point2d);
     }
@@ -160,7 +174,7 @@ void Window::wireframe(const Scene& scene, const Vec3& camera,
 }
 
 void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
-        const Vec3& light, float angle_x, float angle)
+        const Vec3& light, float angle_x,float scale, int axis_type,  float Angle_x, float angle_y, float angle_z)
 {
     vector<Vec2> vertices2d(scene.vertices.size());
     
@@ -169,9 +183,19 @@ void Window::render(const Scene& scene, const Vec3& camera, const Vec3& target,
     for (unsigned long i = 0; i < scene.vertices.size(); i++) {
         point3d = scene.vertices[i];
 
-        // rotate the point in world axis
-        point3d = RotateY(point3d, angle);
+//        // rotate the point in world axis
+//        if(axis_type == 1)
+//            point3d = RotateX(point3d, angle);
+//        if(axis_type == 2)
+//            point3d = RotateY(point3d, angle);
+//        if(axis_type == 3)
+//            point3d = RotateZ(point3d, angle);
 
+        point3d = RotateX(point3d, Angle_x);
+        point3d = RotateY(point3d, angle_y);
+        point3d = RotateZ(point3d, angle_z);
+
+        point3d = Scale(point3d,scale);
 
         point3d = world_to_pixel(point3d, camera , target, width , height);  // this is in camera coordinates
 //        // translate camera to origin

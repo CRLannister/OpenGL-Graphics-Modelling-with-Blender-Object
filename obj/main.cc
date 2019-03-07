@@ -10,9 +10,11 @@ using namespace std;
 // global variables
 Vec3 CAMERA(0, 0, 40), TARGET(0, 0, 0), LIGHT(10, 10, 10);
 Scene SCENE;
-float FIELD_OF_VIEW = 45, ANGLE = 0;
+float FIELD_OF_VIEW = 45, ANGLE_X = 0, ANGLE_Y = 0, ANGLE_Z = 0;
 Window WINDOW;
 int type = 1;
+int axis_type = 2;
+float scale = 1.0;
 
 void display();
 void keyboard(unsigned char key, int x, int y);
@@ -45,9 +47,9 @@ void display()
 {
     WINDOW.clear();
     if(type == 1)
-    WINDOW.render(SCENE, CAMERA, TARGET, LIGHT, FIELD_OF_VIEW, ANGLE);
+    WINDOW.render(SCENE, CAMERA, TARGET, LIGHT, FIELD_OF_VIEW, scale, axis_type, ANGLE_X, ANGLE_Y, ANGLE_Z);
     else if(type == 2)
-    WINDOW.wireframe(SCENE, CAMERA, TARGET, FIELD_OF_VIEW, ANGLE);
+    WINDOW.wireframe(SCENE, CAMERA, TARGET, FIELD_OF_VIEW, scale, axis_type,  ANGLE_X, ANGLE_Y, ANGLE_Z);
     WINDOW.refresh();
 }
 
@@ -99,6 +101,12 @@ void keyboard(unsigned char key, int x, int y)
         TARGET.y--;
     else if (key == 'y')
         TARGET.y++;
+    else if (key == 'b')
+        axis_type = 1;
+    else if (key == 'n')
+        axis_type = 2;
+    else if (key == 'm')
+        axis_type = 3;
 
 
     glutPostRedisplay();
@@ -107,9 +115,23 @@ void keyboard(unsigned char key, int x, int y)
 void special(int key, int x, int y)
 {
     if (key == GLUT_KEY_LEFT)
-        ANGLE -= 5;
+        ANGLE_Y -= 1;
     else if (key == GLUT_KEY_RIGHT)
-        ANGLE += 5;
+        ANGLE_Y += 1;
+    else if (key == GLUT_KEY_DOWN)
+        ANGLE_Z -= .01;
+    else if (key == GLUT_KEY_UP)
+        ANGLE_Z += .01;
+    else if (key == GLUT_KEY_PAGE_UP)
+        ANGLE_X += 1;
+    else if (key == GLUT_KEY_PAGE_DOWN)
+        ANGLE_X -= 1;
+    else if (key ==GLUT_KEY_F1)
+        scale = scale* 1.1;
+    else if (key ==GLUT_KEY_F2)
+        scale = scale* 0.9;
+
+
 
     glutPostRedisplay();
 }

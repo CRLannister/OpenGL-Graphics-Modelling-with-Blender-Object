@@ -89,6 +89,26 @@ Vec3 translate(Vec3& Point,const Vec3& tMat){
 
 }
 
+Vec3 Scale(Vec3& Point,float scale){
+    Mat T(4,4); //Transformation matrix
+    Mat P(4,1); //Point matrix
+    //Transformation matrix
+    T(0,0) = scale;    T(0,1) = 0;      T(0,2) = 0;    T(0,3) = 0;
+    T(1,0) = 0;    T(1,1) = scale;      T(1,2) = 0;    T(1,3) = 0;
+    T(2,0) = 0;    T(2,1) = 0;      T(2,2) = 1;    T(2,3) = 0;
+    T(3,0) = 0;    T(3,1) = 0;      T(3,2) = 0;    T(3,3) = 1;
+    //Point in matrix form
+    P(0,0) = Point.x; P(0,1) = Point.y; P(0,2) = Point.z; P(0,3) = 1;
+
+    P = T*P;
+    Point.x = P(0,0);
+    Point.y = P(0,1);
+    Point.z = P(0,2);
+
+    return Point;
+
+}
+
 //Vec2 world_to_pixel(const Vec3& source ,const Vec3& camera, const Vec3& LookTo,float planeWidth, float planeHeight, float winWidth, float winHeight){
 //    //first determine the World to Camera transforming matrix
 //    Mat WtoC(4,4);
@@ -196,8 +216,8 @@ Vec2 project(Vec3 p, float width, float height, float angle_x)
     retVal.y = Projected(1)/Projected(3);
     retVal.z = S(2);
 
-    float  planeWidth = 5;
-    float planeHeight = 5;
+    float  planeWidth = .3;
+    float planeHeight = .3;
     retVal.x = (retVal.x + planeWidth*0.5)/planeWidth;
     retVal.y = (retVal.y + planeHeight*0.5)/planeHeight;
 
@@ -206,6 +226,25 @@ Vec2 project(Vec3 p, float width, float height, float angle_x)
     retVal.y = (int)((1-retVal.y) * height);
 
     return retVal;
+}
+
+
+
+Vec2 world_to_pixel_wireFrame(Vec3 p, Vec3 cam, Vec3 target, float win_width, float win_height, float angle_x){
+
+    p = world_to_pixel(p,cam,target,win_height,win_height);
+        float angle_y, aspect_ratio;
+    aspect_ratio = win_width / win_height;
+    angle_x = deg2rad(angle_x);
+    angle_y = 2*atan(tan(angle_x/2) / aspect_ratio);
+
+    Vec2 v;
+    v.x = (1 + p.x/fabs(p.z*tan(angle_x/2))) * (win_width/2);
+    v.y = (1 + p.y/fabs(p.z*tan(angle_y/2))) * (win_height/2);
+    v.z = p.z;
+    return v;
+
+
 }
 
 Vec3 world_to_pixel(Vec3 p, Vec3 cam, Vec3 target, float win_width, float win_height, float angle_x)
@@ -217,7 +256,10 @@ Vec3 world_to_pixel(Vec3 p, Vec3 cam, Vec3 target, float win_width, float win_he
 
     //calculate the N unit vector
     //N is the vector from LookTo point to Camera point
-    N = (cam-target).normalize();
+//    N = (cam-target).normalize();
+    target = {-target.x, -target.y, -target.z};
+    N = translate(cam,target).normalize();
+
 
     //U = V X N
     U = cross(V,N).normalize();
